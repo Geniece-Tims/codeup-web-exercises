@@ -13,7 +13,8 @@
     planetsString = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"];
     planetsArray = planetsString;
     console.log(planetsArray);
-
+    // answer: let planetsStringWithBreaks = planetsArray.join("<br>");
+    // console.log(planetsStringWithBreaks);
     /**
      * TODO:
      * Create a string with <br> tags between each planet. console.log() your
@@ -50,7 +51,8 @@
     planets.innerHTML = listOfPlanets;
 
 
-
+    // Another way of doing this:
+    // let planetsUI = "<ul><li>" + planets.join("</li><li> + "</li></ul>";
 
 
 
