@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Forms Lecture</title>
+</head>
+<body>
+  <form action="https://request-inspector.glitch.me/"> // form action //where you'll be sending the information in the form.
+      <input type="text" name="value"> //form input..
+      <input type="submit">
+  </form>
+  ---------------------------------------------------------------------------------------------------------------------------------------
+  <form method="get" action=https://request-inspector.glitch.me/"> // another method of form action..
+      <label for="value">Value</label> //label for="" needs to match up with the id of the input
+      <input type="text"> // without a "name" attribute on a form, the value isn't being submitted with the request (for requests).
+      <input type="text" name="value" id="value"> // having the "name" attribute is very vital for the input! id="" needs to match up with label. name="" doesn't have to match the id, but often times you will see that they do match.
+      <input type="submit">
+  </form>
+  ---------------------------------------------------------------------------------------------------------------------------------------
+  <form method="post" action=https://request-inspector.glitch.me/"> // another method of form action..
+      <label for="value">Value</label>
+      <input type="text" name="value" id="value">
+      <input type="submit" value="Go"> //value="" changes the text value of the submit button.
+      <button>Let's Go</button> // another way to create a submit button..
+  </form>
+  ---------------------------------------------------------------------------------------------------------------------------------------
+  <form method="post" action=https://request-inspector.glitch.me/">
+      <label for="value">Value</label>
+      <input type="text" name="value" id="value">
+      <label for="pw">Password</label>  // takes in text but hide the values that are being typed in. When you click submit the values are still being captured for what the user put in.
+      <input type="password" name="pw" id="pw">
+      <label for="body">Body</label>
+      <textarea name="body" id="body" cols="30" rows="10"></textarea> // cols="" & rows="" set up width and height of a text area.
+      <button>Let's Go</button>
+  </form>
+  ---------------------------------------------------------------------------------------------------------------------------------------
+  <form method="post" action=https://request-inspector.glitch.me/">
+<!--      <label for="value">Value</label>-->
+<!--      <input type="text" name="value" id="value">-->
+<!--      <label for="pw">Password</label> -->
+<!--      <input type="password" name="pw" id="pw">-->
+<!--      <label for="body">Body</label>-->
+<!--      <textarea name="body" id="body" cols="30" rows="10"></textarea> -->
+      <br>
+      <h3>How can we contact you in the future?</h3> //Checkbox method..
+      <input type="checkbox" name="notification-options" value="text-messaging" id="no-tm"> // by default the value of a checkbox is ON, a value attribute allows a value that is submitted with the html form to be a checkbox. With multiple checkbox values, it allows you to have the same key(value). If no checkboxes were selected, the key doesn't get passed along with the request. No value will be returned.
+      <label for="no-tm">Text Messaging</label>
+      -------------------------------------------------
+      <h3>What is 2 + 2?</h3> //Radio button method..
+      <input type="radio" id="mq-a" name="math-question" value="a"><label for="mq-a">1</label>
+      <input type="radio" id="mq-b" name="math-question" value="b"><label for="mq-b">22</label>
+      <input type="radio" id="mq-c" name="math-question" value="c"><label for="mq-c">4</label>
+      <input type="radio" id="mq-d" name="math-question" value="d"><label for="mq-d">20</label> // If all radio buttons have different names they can't be unselected. If you want them all to be associated with the same key, make sure they all have the same name="" attribute. To preselect a value add "checked" after the value="" attribute like these examples: "<input type="text" name="value" id="value" checked>" || "<input type="radio" id="mq-a" name="math-question" value="a" checked><label for="mq-a">1</label>"
+      <button>Let's Go</button>
+      -------------------------------------------------
+      <h3>What's your favorite movie?</h3> // Drop down select method..
+      <select name="fav-dreamworks-film" id="fav-dreamworks-film">
+          <option value="shrek">Shrek</option> // the value attribute is optional. Why you should is because sometimes the values required have a different visual expectation from what the user may see.
+          <option value="megamind">Megamind</option>
+          <option value="kungfu panda">Kung Fu Panda</option>
+          <option value="shrek4">Shrek Forever After</option>
+          <option value="puss-in-boots-2">Puss In Boots: The Last Wish</option>
+      </select>
+      <input type="hidden" name="secret" value="i don't really like that many cheeses"> // the point of a hidden input is because of website manipulation that can affect form submissions. It's a security feature you can design within your backend, or pass along a userid within your form, or database for something you're submitting in your form.
+      <button>Let's Go</button>
+      ---------------------------------------------------------------------------------------------------------------------------------------
+      <form method="post" action=https://request-inspector.glitch.me/">
+          <label for="value">Value</label>
+          <input type="text" name="value" id="value" disabled value="muenster"> // disable: used to keep a value displayed but keep the user from manipulating that value. Input can be highlighted, copy/pasted
+          <input type="text" name="value" id="value" placeholder value="muenster"> // placeholder: gives more context for what a label may be used for (shadow text). The placeholder won't be displayed until the text field is empty. The placeholder text doesn't get submitted with the form if left empty.
+<!--          <label for="value">Value</label>-->
+<!--          <input type="text" name="value" id="value">-->
+<!--          <label for="pw">Password</label>  // takes in text but hide the values that are being typed in. When you click submit the values are still being captured for what the user put in.-->
+<!--          <input type="password" name="pw" id="pw">-->
+<!--          <label for="body">Body</label>-->
+<!--          <textarea name="body" id="body" cols="30" rows="10"></textarea> // cols="" & rows="" set up width and height of a text area.-->
+          <button>Let's Go</button>
+      </form>
+  </form>
+</body>
+</html>
+
+**OTHER NOTES:
+// Don't try to mimic this format, it's for notes only!!!
+// To create a certain number of syntax's at once: type the name of the syntax + * + the number of copies you want + tab
