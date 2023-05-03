@@ -1,0 +1,123 @@
+p {
+    color: crimson;
+}
+
+.heading{
+    color: steelblue;
+}
+
+#main-heading {
+    color: rebeccapurple;
+}
+
+#main-heading, .reminder {
+    background-color: yellow;
+}
+
+.make-bigger {
+    font-size: 2em; /* if you add this to a class="" element, add a space between the two in order to get the class to do two things at once. Ex. class="reminder make-bigger." */
+}
+
+h1.make-bigger {
+    font-size: 4em; /* add this to an h1 header to make the font size 2x bigger than what it may already be preset at.*/
+}
+
+h1.heading {
+    color: indigo;
+}
+/*an element of a class is more specific than just a class so the indigo color will take precedence in the html document.*/
+h2.heading {
+    color: sandybrown;
+}
+
+.reminder.make-bigger {
+    color: mediumturquoise; /*combining two selectors will do both at the same time in the html document.*/
+}
+
+footer p{ /*this is a descendant selector that modifies the color of the paragraph(s) in a footer*/
+    color: olivedrab;
+}
+
+footer>p { /*this would keep the color for the footer olivedrab because the descendant selector takes precedence over the selector on line 41.*/
+    color: orchid;
+}
+
+/*pseudo class selectors "nth" are useful but can be confusing for new developers. Some pseudo classes are primarily used with "a" anchor tags which changes dependent on the action being done.*/
+a:link {
+    color: green;
+}
+a:visited { /*will change the color of the link to dark orange.*/
+    color: darkorange;
+}
+a:hover { /*font will change to pink when hovering over the link and the background color will be chartreuse.*/
+    color: hotpink;
+    background-color: chartreuse;
+}
+a:active { /*link will change to black once clicked on.*/
+    color:black
+}
+
+/*color can be manipulated through hex codes "#" (two digits that represent 256 values of RGB). They are base 16 with a max value of RGB = to #ffffff. Another way to represent colors is through using rgb() which allows you to bring in the color code combination using hex 10 numbers. You have to pass in 3 diff values for red, green, and blue. Ex. color: rgb(##, ##, ##). If you want to see colors that are on a particular website, colormind.io has a link for website colors that will provide you with the colors from images online that are using specific colors. Coolors website is also a good site for color hexes. You find yourself in a situation with hex codes use two numbers that repeat, you can do #EF0 where the first, second, and third digits are repeated twice- Ex. background-color: #EEFF00 can be converted to #EF0.*/
+#main-heading {
+    color: #8b910a;
+    color: rgb(16, 22, 20);
+}
+#main-heading {
+    color: #474973;
+    text-decoration: underline;
+}
+/*you normally see color manipulation with color & background-color, but you have the ability to manipulate more than just color like text-decoration. Color will match up with the color given. You can also add and manipulate two values within the text-decoration selector- Ex. text-decoration: underline blue;. You can also overline the text and it will put a line above the text.*/
+a:link {
+    color: blue;
+    text-decoration: none; /*allows you to add "none".*/
+}
+#main-heading {
+    color: #474973;
+    text-decoration: underline;
+    text-align: center; /*text-align only aligns text! If you enter "center" it will just center the text, nothing else. It can also go to the right or left.*/
+}
+p {
+    color: crimson;
+    text-indent: 40px; /*will make an indentation to the first line of text and are typically used with paragraphs. All subsequent lines to back to the start of the element. "lorem" is placeholder text that is used as a sample for text. */
+}
+
+#main-heading {
+    color: #474973;
+    text-decoration: underline pink;
+    text-align: center;
+    font-family: 'Oxygen', sans-serif; /*fonts.google.com has different fonts that can be used that you may not already have on your computer. <link href=https://fonts.google.com/css2?family=Oxygen&display=swap" rel="stylesheet"><link rel="stylesheets" href="css/selectors-and-properties.css"*/
+    font-style: italics; /*italics or oblique are the two options. They may not behave how you want them to.*/
+}
+/*"em"s are size measurements that are used with newspapers. Pixels (px) are another measurement for size.*/
+#cheese {
+    width: 100vw;
+    width: 100vh; /*when manipulating an element you can choose what you want to use for measurements. "view width" is similar to percentage but specifically regarding the width of the window. "view height" creates an image to be the same height as the window. */
+    font-weight: bold; /*bolds the fonts except for headings which already come bolded. Sometimes when you use custom fonts the bold styling doesn't get included so you would have to go back and add the bold option of the font to your html link.*/
+}
+
+#main-heading, .reminder {
+    background: brown; /*you can change the color to your background in css using the "background" element. The default color of an element in a browser is transparent. By default all elements are transparent, but appears white because if all elements have a background color of transparent, the color that will appear is white. */
+}
+body {
+    background-color: burlywood;
+    background-image: url("..//img/tile.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /* the background color would be both colors. You would see both. ".." will take you back to whatever folder. To get a background-repeat: no-repeat will only show the one image one time. Background-size: cover; will maximize the image to fit the whole page if the image is small, but if the image is already big, it will minimize it to properly fit the page. . background-attachment: fixed keeps the background image in place and fixed to one location. */
+    ul {
+        list-style: upper-roman;
+    }
+/*gives you the ability to change your bullet points. ul's can be styled to look like an ol. You can share them. to remove all of the bullets, you can change the list-style to "none". */
+ol {
+        list-style: upper-roman;
+        color: orangered;
+    }
+}
+li {
+    color: palegreen; /*makes every list item whatever color you designate that will be in contrast to the color listed in the ol(this is for having a separate color for both ol & li.*/
+}
+ol li {
+    color: inherit; /* Inherit takes on the color that is designated by the parent property. */
+}
+/*COMMAND OPTION L fixes indentation of your html document*/
+/* The * will select all elements in the css document. */
