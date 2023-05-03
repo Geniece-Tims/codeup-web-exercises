@@ -1,0 +1,20 @@
+.box {
+    background-color: saddlebrown;
+    width: 25vh/*vw*/; /*affects the width of the box. If you use the "vh" assignment for the width it will make the box a square. to use "vw" for the width would make the box a rectangle.*/
+    height: 25vh; /*affects the height of the box.*/
+    padding: 25px 65px 10px 1000px; /*When you have one value it will affect the areas around the whole box. Two values affects top/bottom and left/right. Three values assigns first value to the top of the box, second value to the sides, and third value to the bottom. Four values makes each value take place clockwise with first value = top, second value = right, third value = bottom, fourth value = left. */
+    /*  top    25px  padding  */
+    /*  right  65px  padding  */
+    /*  bottom 10px padding  */
+    /*  left   1000px  padding  */
+    border: 5px solid blue; /* solid, black border of 5px thickness. A shorthand property for setting the individual border property values in a single place in the style sheet. border can be used to set the values for the following keys: border-width, border-style, and border-color.  */
+    margin: 10px; /*This is the area around and element that can be manipulated. */
+    margin: 5px 20px;          /* top and bottom 5px, left and right 20px margin */
+    margin: 10px 3px 30px 5px; /* top 10px, right 3px, bottom 30px, left 5px margin */
+}
+/*<span> content does not get height and width*/
+.playground {
+    background-color: slateblue;
+    width: 24vw;
+    height: 25vh;
+ }

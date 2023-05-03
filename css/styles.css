@@ -50,16 +50,6 @@ table {
    table-layout: fixed;
 }
 
-td {
-   background-color: white;
-   border-right: 2px solid black;
-   border-left: 2px solid black;
-   font-size: medium;
-   font-weight: bold;
-   text-align: center;
-   padding: 10px;
-}
-
 th {
    background-color: brown;
    color: black;
@@ -70,6 +60,18 @@ th {
    border-left: 2px solid black;
    padding: 10px;
 }
+
+td {
+   background-color: white;
+   border-right: 2px solid black;
+   border-left: 2px solid black;
+   font-size: medium;
+   font-weight: bold;
+   text-align: center;
+   padding: 10px;
+}
+
+
 
 a:link {
    color: brown;
