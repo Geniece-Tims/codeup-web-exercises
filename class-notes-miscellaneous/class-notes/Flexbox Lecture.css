@@ -1,0 +1,138 @@
+/*Flexbox provides a convenient way to arrange the layout of elements (flex items) inside a parent container (the "flexible box" or flex container). Flexbox optimizes one dimensional layouts. */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Flexbox Basics Examples</title>
+<style>
+ * {
+     box-sizing: border-box;
+ }
+body {
+    margin: 0;
+    font-family: Helvetica;
+    font-weight: bold;
+}
+.flex-container {
+    width: 100%;
+    border: 3px solid goldenrod;
+}
+.flex-item {
+    background: #BFD45D;
+    border: 2px solid #F9EFD6;
+    padding: 1em;
+}
+</style>
+</head>
+<body>
+
+/*This container element contains three block-level child elements. Adding "flexbox flex" to the container will make the element a flexbox. In CSS this is done by adding the "display declaration" and then "flex" as the value. For the parent ".flex-container" makes the declaration.*/
+
+<div class="flex-container">
+<div class="flex-item">Item 1</div>
+<div class="flex-item">Item 2</div>
+<div class="flex-item">Item 3</div>
+
+/*Any direct children are now flex items of their flex parent.*/
+/*This will result in the flex items appearing as inline-level elements. They're still block-level but are now controlled by flexbox. They behave in the following way:
+-Items display in a row (flex-direction is row).
+-The items do not stretch on the main axis, but can shrink.
+-The items will stretch to fill the size of the cross axis.
+- The flex-basis property is set to auto.
+-The flex-wrap property is set to nowrap.*/
+
+</div>
+</body>
+</html>
+
+/*Flexbox Axes: in a row layout(the default), the horizontal axis is referred to as the "main axis" and the vertical axis is referred to as the "cross axis". When the flex container is set to a column layout, the main and cross axes are inverted. Item aligned are controlled along these two axes using flexbox.*/
+
+/*Flex Container Properties:
+~ Flex-Direction:
+    + row: is a way to arrange flex items into a row.
+    + row-reverse: a way to reverse the order of items and the size of the container they align to.
+    + column: puts your flex-items into a column in order.
+    + column-reverse: reverses the order of your flex-items in a column.
+~Justify Content: controls the horizontal positioning of elements.
+    + flex-start
+    + flex-end
+    + content-center
+    + space-between
+    + space-around
+    + space-evenly
+        ~Using justify-content will position elements along the main axis, regardless of a row or column direction. For column direction, a height must be specified for the flex container for justify content to have an effect. See examples below: */
+
+            + flex-direction: column, justify-content: flex-start;
+            + " ":column, " ":flex-end;
+            + " ":column, " ":center;
+            + " ":column, " ":space-between;
+            + " ":column, " ":space-around;
+            + " ":column, " ":space-evely;
+
+           /* ~align-items controls the span of individual items along the cross axis.*/
+
+  /*Align Items: used to set the position of items along the cross axis. The parent container height must be greater than the items and/or the items have different heights. Several values are available:*/
+
+    + align-items:flex-start; height: 5em;
+    + align-items:flex-end; height: 5em;
+    + align-items:stretch; height: 5em;
+    + align-items:center; height: 5em;
+    + flex-direction: column; align-items: flex-start;
+    + flex-direction: column; align-items: flex-end;
+    + flex-direction: column; align-items: stretch/*(the default value)*/;
+    + flex-direction: column; align-items: center;
+        /* ~align-items: baseline is useful when the flex items have different heights and we want to center them using their text. See example of different classes being added with different font sizes and baseline will align these items:
+*/
+        .flex-container {
+            display: flex;
+            align-items: baseline;
+            border: 5px solid goldenrod;
+            height: 100vh;
+        }
+        .box1 {
+            font-size: 15px;
+        }
+        .box2 {
+            font-size: 30px;
+        }
+        .box3 {
+            font-size: 45px;
+        }
+        .box4 {
+            font-size: 60px;
+        }
+        .box5 {
+            font-size: 75px;
+        }
+
+/*Flex Wrap: controls how extra items behave when more items are present than can fit within a flex container of a certain width.*/
+    + flex-wrap: nowrap
+    + flex-wrap: wrap
+    + flex-wrap: wrap-reverse
+
+/*Align Content: when multiple rows or columns of flex items are present, the spacing of these lines of items may be controlled along the cross axis by targeting the align-content property.*/
+    + flex-wrap: wrap; height: 15em; align-content: flex-start;
+    + flex-wrap: wrap; height: 15em; align-content: center;
+    +flex-wrap: wrap; height: 15em; align-content: space-evenly;
+      /*  ~ The align-content property will have no effect unless the items wrap into multiple rows or columns. align-items may still be used to align-items within each individual row/colum:*/
+            + flex-wrap: wrap;
+              height: 15em;
+              align-content: space-between;
+              align-items: flex-end;
+              (the flex item heights alternate)
+
+/*Flex Item Properties: different properties that can set individual flex items to control their positioning within a row or column.
+    + Order: specifies the order of flex items.
+        - Helpful when the order of items in a responsive component change at different break points.
+    + Align Self: controls the cross axis alignment of an individual flex item.*/
+
+        - height: 5em(for container); align-self: center(first item); align-self: flex-start(last item);
+
+    /*+ Flex Grow: used to allow certain items to "grow" to a width needed for the combination of all items to take up the parent width in the case where flex items do not take up their entire flex parent container.*/
+
+        - flex-grow: 1 (first item only)
+        - flex-grow: 1 (on all items)
+        - flex-grow: 1 (for first item); flex-grow: 2 (for last item)
+
+            /*~ All items that have nonzero flex-grow properties will equally share the expanded width necessary to take up the flex container width unless different nonzero values are used, in which case the ratio of one number over another will translate between the various flex items widths.
+*/
