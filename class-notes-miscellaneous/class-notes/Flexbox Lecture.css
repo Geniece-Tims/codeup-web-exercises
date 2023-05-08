@@ -136,3 +136,59 @@ body {
 
             /*~ All items that have nonzero flex-grow properties will equally share the expanded width necessary to take up the flex container width unless different nonzero values are used, in which case the ratio of one number over another will translate between the various flex items widths.
 */
+
+/*Flexbox in Practice*/
+
+/*Centering and Alignment: centering block-level elements horizontally can be done with "margin: 0 auto". This can be achieved with flexbox by adding the following declarations to parent element: */
+
+.some-parent {
+    /* other declarations */
+    display: flex;
+    justify-content: center;
+}
+
+/*!*With flexbox, simply adding "align-items: center" to the above declaration block vertically centers a flex item. A flexbox item can also be perfectly centered in its parent by simply setting "margin: auto" on the flex item. When extra space is needed between multiple flex items, "margin-{left/right}: auto" can be used to automatically create spacing between elements until the spacing fills out the remaining flex container space.*/
+
+    + margin-left: auto(third item);
+    + margin-right: auto(second item);
+    + margin-right: auto(first item);
+    + margin: 0 auto(second item);*/
+
+/*Styling Components
+~ Navbar: almost any page in a web application will contain some kind of navbar. Here's an example:*/
+HTML: <body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+</body>
+
+/* The following CSS will create the basic styling of the navbar before we change the layout:*/
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+nav {
+    background: #333333;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+    font-family: Verdana;
+}
+nav a:hover {
+    background: black;
+}
+/*With this CSS, we have removed default styling from the body and unordered list elements and added a bit of styling to match colors and fonts.*/
