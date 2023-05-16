@@ -2,7 +2,54 @@
     box-sizing: border-box;
 }
 .jumbotron {
-    background-image: url("class-notes-miscellaneous/images/pizza.png");
+    background-image: url("images/pizza.png");
     height: 346px;
-    background-size: cover;
+    background-size: 100%;
+    display: flex;
+    padding: 0 14%;
+    z-index: 1000;
+    width: 100%;
 }
+.caption {
+    position: absolute;
+    bottom: 60%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    opacity: 0.75;
+    color: black;
+    padding: 0 15%;
+    font-size: 48px;
+    text-align: center;
+}
+h6 {
+    font-size: 42px;
+    margin-top: 50px;
+    padding-left: 17%;
+}
+.nav {
+    padding: 0;
+    margin: 0 17%;
+}
+.card {
+    padding: 0;
+    margin: 0 17%;
+}
+/*.dropdown {*/
+/*    position: relative;*/
+/*    display: inline-block;*/
+/*}*/
+
+/*.dropdown-content {*/
+/*    display: none;*/
+/*    position: absolute;*/
+/*    min-width: 160px;*/
+/*    z-index: 1;*/
+/*}*/
+
+/*.dropdown:hover .dropdown-content {*/
+/*    display: block;*/
+/*}*/
+
+
+

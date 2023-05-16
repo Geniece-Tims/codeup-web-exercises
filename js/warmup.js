@@ -137,47 +137,159 @@
 
 // // Write a function that takes in an array of objects and returns an array containing all of the names from the original array.
 //
-const hamsters = [
-    {
-        name: "Hamtaro",
-        heightInMM: 86,
-        fur: ['orange', 'white'],
-        gender: "male",
-        dateOfBirth: "August 6"
-    } , {
-        name: "Bijou",
-        heightInMM: 75,
-        fur: ['white'],
-        gender: "female",
-        dateOfBirth: "July 10"
-    } , {
-        name: "Oxnard",
-        heightInMM: 100,
-        fur: ['grey', 'white'],
-        gender: "male",
-        dateOfBirth: "May 3"
-    } , {
-        name: "Boss",
-        heightInMM: 120,
-        fur: ['brown', 'white'],
-        gender: "male",
-        dateOfBirth: "September 21"
-    } , {
-        name: "Snoozer",
-        heightInMM: 85,
-        fur: ['brown', 'white', "pink"],
-        gender: "male",
-        dateOfBirth: "January 14"
-    }
-];
+// const hamsters = [
+//     {
+//         name: "Hamtaro",
+//         heightInMM: 86,
+//         fur: ['orange', 'white'],
+//         gender: "male",
+//         dateOfBirth: "August 6"
+//     } , {
+//         name: "Bijou",
+//         heightInMM: 75,
+//         fur: ['white'],
+//         gender: "female",
+//         dateOfBirth: "July 10"
+//     } , {
+//         name: "Oxnard",
+//         heightInMM: 100,
+//         fur: ['grey', 'white'],
+//         gender: "male",
+//         dateOfBirth: "May 3"
+//     } , {
+//         name: "Boss",
+//         heightInMM: 120,
+//         fur: ['brown', 'white'],
+//         gender: "male",
+//         dateOfBirth: "September 21"
+//     } , {
+//         name: "Snoozer",
+//         heightInMM: 85,
+//         fur: ['brown', 'white', "pink"],
+//         gender: "male",
+//         dateOfBirth: "January 14"
+//     }
+// ];
+//
+// function extractNames(arr) {
+//     let bucket = [];
+//     arr.forEach(hamsters) {
+//         bucket.push(hamsters.name):
+//     });
+//     return bucket;
+// }
+//
+// console.log(extractNames(hamsters)); // returns ["Hamtaro", "Bijou", "Oxnard", "Boss", "Snoozer"];
 
-function extractNames(arr) {
-    let bucket = [];
-    arr.forEach(hamsters) {
-        bucket.push(hamsters.name):
-    });
-    return bucket;
-}
+//Write a function that takes in an array of objects and returns the object with the largest heightInMM property.
 
-console.log(extractNames(hamsters)); // returns ["Hamtaro", "Bijou", "Oxnard", "Boss", "Snoozer"];
+// const hamsters = [
+//     {
+//         name: "Hamtaro",
+//         heightInMM: 86,
+//         fur: ['orange', 'white'],
+//         gender: "male",
+//         dateOfBirth: "August 6"
+//     } , {
+//         name: "Bijou",
+//         heightInMM: 75,
+//         fur: ['white'],
+//         gender: "female",
+//         dateOfBirth: "July 10"
+//     } , {
+//         name: "Oxnard",
+//         heightInMM: 100,
+//         fur: ['grey', 'white'],
+//         gender: "male",
+//         dateOfBirth: "May 3"
+//     } , {
+//         name: "Boss",
+//         heightInMM: 120,
+//         fur: ['brown', 'white'],
+//         gender: "male",
+//         dateOfBirth: "September 21"
+//     } , {
+//         name: "Snoozer",
+//         heightInMM: 85,
+//         fur: ['brown', 'white', "pink"],
+//         gender: "male",
+//         dateOfBirth: "January 14"
+//     }
+// ];
+// The solution I did myself:
+// function extractHeight(arr) {
+//     let bucket = [];
+//     arr.forEach(hamster => {
+//         bucket.push(hamster.heightInMM);
+//     });
+//     return bucket;
+// }
+//
+// console.log(getTallest(hamsters));
+//
+// // The correct solution:
+// const getTallest = function(arr) {
+//   let tallest = {heightInMM: 0};
+//   arr.forEach(function(obj) {
+//      if (obj.heightInMM > tallest.heightInMM) {
+//      }
+//    });
+//    return tallest;
+// };
+
+// Write a function that takes in an array of objects and returns an array of the objects from the array that only have one fur color.
+// const hamsters = [
+//     {
+//         name: "Hamtaro",
+//         heightInMM: 86,
+//         fur: ['orange', 'white'],
+//         gender: "male",
+//         dateOfBirth: "August 6"
+//     } , {
+//         name: "Bijou",
+//         heightInMM: 75,
+//         fur: ['white'],
+//         gender: "female",
+//         dateOfBirth: "July 10"
+//     } , {
+//         name: "Oxnard",
+//         heightInMM: 100,
+//         fur: ['grey', 'white'],
+//         gender: "male",
+//         dateOfBirth: "May 3"
+//     } , {
+//         name: "Boss",
+//         heightInMM: 120,
+//         fur: ['brown', 'white'],
+//         gender: "male",
+//         dateOfBirth: "September 21"
+//     } , {
+//         name: "Snoozer",
+//         heightInMM: 85,
+//         fur: ['brown', 'white', "pink"],
+//         gender: "male",
+//         dateOfBirth: "January 14"
+//     }
+// ];
+// function singleFurColor(arr) {
+//     let furColor = [];
+//     arr.forEach(function(arr) {
+//         if (arr.fur.length === 1) {
+//             furColor.push(arr);
+//         }
+//     });
+//     return furColor;
+// }
+// console.log(singleFurColor(hamsters)); // returns [{name: "Bijou", heightInMM: 75, fur: ['white'], gender: "female", dateOfBirth: "July 10"}];
+// answer:
+// function singleFurColor(arr) {
+//  let newArr = [];
+//  arr.forEach(function(elem) {
+//      if(elem.fur.length === 1) {
+//          newArr.push(elem);
+//      }
+// })
+//
+// return newArr;
+// }
 
