@@ -1,0 +1,8 @@
+* {
+    box-sizing: border-box;
+}
+.jumbotron {
+    background-image: url("class-notes-miscellaneous/images/pizza.png");
+    height: 346px;
+    background-size: cover;
+}
