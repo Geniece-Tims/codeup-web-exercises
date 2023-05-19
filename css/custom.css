@@ -35,21 +35,29 @@ h6 {
     padding: 0;
     margin: 0 17%;
 }
-/*.dropdown {*/
-/*    position: relative;*/
-/*    display: inline-block;*/
-/*}*/
+.card-header {
+    border: 1px solid #cccccc;
+}
+ul.list-group {
+    border: 1px solid #cccccc;
+}
 
-/*.dropdown-content {*/
-/*    display: none;*/
-/*    position: absolute;*/
-/*    min-width: 160px;*/
-/*    z-index: 1;*/
-/*}*/
-
-/*.dropdown:hover .dropdown-content {*/
-/*    display: block;*/
-/*}*/
-
+li.list-group-item {
+    border: 1px solid #cccccc;
+    padding: 5px 10px;
+}
+.dropdown {
+    border-bottom: 1px solid lightgrey;
+    padding: 5px 10px;
+}
+#dropdownMenuButton2 {
+    width: 80rem;
+}
+.form-check {
+    margin: 10px 10px;
+}
+.form-check {
+    /*margin-bottom: 1px;*/
+}
 
 
