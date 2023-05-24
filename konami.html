@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Konami Code</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+<script src="js/jquery.js"></script>
+    <h1>Konami Code Logger</h1>
+    <p>Press the keys corresponding to the Konami Code: ↑ ↑ ↓ ↓ ← → ← → B A enter</p>
+
+    <script>
+        const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyA', 'KeyB', 'KeyReturn'];
+
+        let konamiIndex = 0;
+
+        const timer = 5000;
+        let timerID = null;
+
+        $(document).keyup(function(event) {
+            const keyPressed = event.code;
+
+            if (keyPressed === konamiCode[konamiIndex]) {
+                konamiIndex++;
+
+                if (konamiIndex === konamiCode.length) {
+                    alert('Konami Code entered. Congrats, You have added 30 lives!');
+                    clearTimeout(timerID);
+                    konamiIndex = 0;
+
+                }
+            } else {
+                konamiIndex = 0;
+                clearTimeout(timerID);
+                konamiIndex = 0;
+            }
+        });
+
+        if (konamiIndex === 0) {
+            startTimer();
+        }
+
+        function startTimer() {
+            clearTimeout(timerID);
+
+            timerID = setTimeout(function() {
+                alert('Uh oh! Your time is up. Try again!');
+                konamiIndex = 0;
+                timerID = null;
+            }, timer);
+        }
+    </script>
+<img src="gif/streetfighter_animation.gif" alt="street fighter animation character">
+</body>
+</html>

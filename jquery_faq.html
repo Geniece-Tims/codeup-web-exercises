@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>National Parks FAQs</title>
+  <style>
+    .invisible {
+      visibility: hidden;
+    }
+    body {
+      background-color: white;
+    }
+  </style>
+</head>
+<body>
+<p>Here are 10 frequently asked questions (FAQs) about national parks:</p>
+
+<dl>
+  <dd class="invisible">What is a national park?</dd>
+  <dd class="invisible">How many national parks are there?</dd>
+  <dd class="invisible">What activities can I do in a national park?</dd>
+  <dd class="invisible">Can I bring my pets to national parks?</dd>
+  <dd class="invisible">Do I need a permit to visit a national park?</dd>
+  <dd class="invisible">Are national parks year-round?</dd>
+  <dd class="invisible">Can I camp in national parks?</dd>
+  <dd class="invisible">Are there accommodations available within national parks?</dd>
+  <dd class="invisible">Can I have a campfire in national parks?</dd>
+  <dd class="invisible">How can I contribute to the conservation of national parks?</dd>
+</dl>
+<script>
+  $(document).ready(function() {
+    $('#toggleLink').on('click', function() {
+      $('dd').toggleClass('invisible');
+    });
+    $('dt').on('click', function() {
+      $(this).addClass('highlighter');
+    })
+  });
+</script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<a href="#" id="toggleLink">Click Here</a>
+</body>
+</html>

@@ -364,16 +364,20 @@
 
 // Write a JavaScript function that takes in an array of numbers and returns an array of the same length where all of the numbers have been replaced with the number multiplied by 3.
 
-function multiplyElementsByThree(arr) {
-    let multipliedArr = []; // man an empty array contained in a new variable to let function know to return an array.
-    arr.forEach(num => { //this tells to take each number within each array..
-        multipliedArr.push(num * 3); // and multiply it by 3 using push method.
-    });
-    return multipliedArr; // each number in array will be return multiplied by 3 and inside an array.
-}
+// function multiplyElementsByThree(arr) {
+//     let multipliedArr = []; // man an empty array contained in a new variable to let function know to return an array.
+//     arr.forEach(num => { //this tells to take each number within each array..
+//         multipliedArr.push(num * 3); // and multiply it by 3 using push method.
+//     });
+//     return multipliedArr; // each number in array will be return multiplied by 3 and inside an array.
+// }
+//
+//
+// console.log(multiplyElementsByThree([3,4,5])); // returns [9, 12, 15];
+// console.log(multiplyElementsByThree([12,8])); // returns [36, 24];
+// console.log(multiplyElementsByThree([100])); // returns [300];
+// console.log(multiplyElementsByThree([15, 9, 33, 16, 50])); // returns [45, 27, 99, 48, 150];
 
 
-console.log(multiplyElementsByThree([3,4,5])); // returns [9, 12, 15];
-console.log(multiplyElementsByThree([12,8])); // returns [36, 24];
-console.log(multiplyElementsByThree([100])); // returns [300];
-console.log(multiplyElementsByThree([15, 9, 33, 16, 50])); // returns [45, 27, 99, 48, 150];
+
+
