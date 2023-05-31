@@ -23,11 +23,10 @@
 
         }
         .restaurant-image {
-            width: 100px;
+            width: 200px;
             height: auto;
             border-radius: 5px;
             border: #333333;
-            justify-content: space-between;
         }
         h5 {
             text-align: center;
@@ -56,13 +55,13 @@
         container: 'map', // container ID
         style: 'mapbox://styles/mapbox/streets-v12', // style URL
         center: [-96.7912845, 32.7937342], // starting position [lng, lat]
-        zoom: 10, // starting zoom
+        zoom: 5, // starting zoom
     })
 
     var restaurantsInfo = [
         {
             address: "216 W Virginia St #101, McKinney, TX 75069",
-            popupHTML: "<div class='restaurant'><img src='images/sugarbacon.webp' alt='Sugarbacon restaurant McKinney' class='restaurant-image'><img src='images/sugarbacon2.jpg' alt='Sugarbacon Restaurant and Bar' class='restaurant-image'>\
+            popupHTML: "<div class='restaurant'><img src='images/sugarbacon.webp' alt='Sugarbacon restaurant McKinney' class='restaurant-image'>\
             <h5>Sugarbacon Proper Kitchen</h5>\
             <p><strong>Favorite Dish:</strong> Pulled Pork Benedict - (Buttermilk Biscuit, Poached Egg, Breakfast Potatoes, Chipotle Hollandaise)</p>\
             <p><strong>Favorite Drink:</strong> Mimosa - (Brunch Champagne & Orange Juice)</p>\
@@ -71,7 +70,7 @@
         },
         {
             address: "3121 Ross Ave, Dallas, TX 75204",
-            popupHTML: "<div class='restaurant'><img src='images/xoxo.webp' alt='XOXO Dining Room Restaurant and Bar' class='restaurant-image'><img src='images/xoxo2.jpg' alt='XOXO Dining Room Restaurant and Bar' class='restaurant-image'>\
+            popupHTML: "<div class='restaurant'><img src='images/xoxo.webp' alt='XOXO Dining Room Restaurant and Bar' class='restaurant-image'>\
             <h5>XOXO Dining Room</h5>\
             <p><strong>Favorite Dish:</strong> Steak & Eggs - (10oz. Strip Steak, Breakfast Potatoes, Chimichurri, & Sunny-Side Up Eggs)</p>\
             <p><strong>Favorite Drink:</strong> Watermelon Sugar - Bacardi Silver, Watermelon, Jalapeno, & Fresh Mint</p>\
@@ -80,7 +79,7 @@
         },
         {
             address: "1933 Elm St, Dallas, TX 75201",
-            popupHTML: "<div class='restaurant'><img src='images/kitchenkocktails.jpg' alt='Kitchen and Kocktails restaurant and bar' class='restaurant-image'><img src='images/kitchenkocktails2.webp' alt='Kitchen + Kocktails Restaurant and Bar' class='restaurant-image'>\
+            popupHTML: "<div class='restaurant'><img src='images/kitchenkocktails.jpg' alt='Kitchen and Kocktails restaurant and bar' class='restaurant-image'>\
             <h5>Kitchen + Kocktails</h5>\
             <p><strong>Favorite Dish:</strong> Caribbean Jerk Lamb Chops, Collard Greens w/ Smoked Turkey, and Candied Yams</p>\
             <p><strong>Favorite Drink:</strong> To Go Frozen D'Usse - D'Usse Floater, Strawberry Margarita & Mango Flavored Frozen Lemonade</p>\
@@ -93,7 +92,7 @@
         geocode(info.address, token).then(function(coordinates) {
             console.log(coordinates);
             map.setCenter(coordinates);
-            map.setZoom(15);
+            map.setZoom(10);
 
             var marker = new mapboxgl.Marker().setLngLat(coordinates).addTo(map);
 
