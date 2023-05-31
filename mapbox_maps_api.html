@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox API</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js'></script>
+    <style>
+        body {margin: 0; padding: 0; background-color: black }
+        #map {position: absolute;}
+        h1 {
+            text-align: center;
+            background-color: black;
+            color: deeppink;
+            padding-top: 10px;
+        }
+        .restaurant {
+            background-color: black;
+            color: white;
+            text-align: left;
+            width: 200px;
+
+        }
+        .restaurant-image {
+            width: 100px;
+            height: auto;
+            border-radius: 5px;
+            border: #333333;
+            justify-content: space-between;
+        }
+        h5 {
+            text-align: center;
+            text-decoration: underline;
+            color: deeppink;
+            font-size: 16px;
+            /*margin-top: -3px;*/
+        }
+        p strong {
+            color: deeppink;
+        }
+        p {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+<script src="js/mapbox-geocoder-utils.js"></script>
+<script src="js/keys.js"></script>
+<h1>My Favorite Restaurants: Dallas Edition</h1>
+
+<div id='map' style='width: 100%; height: 100%;'></div>
+<script>
+    mapboxgl.accessToken = myMapboxToken;
+    var map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v12', // style URL
+        center: [-96.7912845, 32.7937342], // starting position [lng, lat]
+        zoom: 10, // starting zoom
+    })
+
+    var restaurantsInfo = [
+        {
+            address: "216 W Virginia St #101, McKinney, TX 75069",
+            popupHTML: "<div class='restaurant'><img src='images/sugarbacon.webp' alt='Sugarbacon restaurant McKinney' class='restaurant-image'><img src='images/sugarbacon2.jpg' alt='Sugarbacon Restaurant and Bar' class='restaurant-image'>\
+            <h5>Sugarbacon Proper Kitchen</h5>\
+            <p><strong>Favorite Dish:</strong> Pulled Pork Benedict - (Buttermilk Biscuit, Poached Egg, Breakfast Potatoes, Chipotle Hollandaise)</p>\
+            <p><strong>Favorite Drink:</strong> Mimosa - (Brunch Champagne & Orange Juice)</p>\
+            <p><strong>Why I Love It:</strong> My sister and niece treated me to a Mother's Day brunch here.</p>\
+        </div>"
+        },
+        {
+            address: "3121 Ross Ave, Dallas, TX 75204",
+            popupHTML: "<div class='restaurant'><img src='images/xoxo.webp' alt='XOXO Dining Room Restaurant and Bar' class='restaurant-image'><img src='images/xoxo2.jpg' alt='XOXO Dining Room Restaurant and Bar' class='restaurant-image'>\
+            <h5>XOXO Dining Room</h5>\
+            <p><strong>Favorite Dish:</strong> Steak & Eggs - (10oz. Strip Steak, Breakfast Potatoes, Chimichurri, & Sunny-Side Up Eggs)</p>\
+            <p><strong>Favorite Drink:</strong> Watermelon Sugar - Bacardi Silver, Watermelon, Jalapeno, & Fresh Mint</p>\
+            <p><strong>Why I Love It:</strong> It's the first place I went to eat at when coming home from Japan.</p>\
+        </div>"
+        },
+        {
+            address: "1933 Elm St, Dallas, TX 75201",
+            popupHTML: "<div class='restaurant'><img src='images/kitchenkocktails.jpg' alt='Kitchen and Kocktails restaurant and bar' class='restaurant-image'><img src='images/kitchenkocktails2.webp' alt='Kitchen + Kocktails Restaurant and Bar' class='restaurant-image'>\
+            <h5>Kitchen + Kocktails</h5>\
+            <p><strong>Favorite Dish:</strong> Caribbean Jerk Lamb Chops, Collard Greens w/ Smoked Turkey, and Candied Yams</p>\
+            <p><strong>Favorite Drink:</strong> To Go Frozen D'Usse - D'Usse Floater, Strawberry Margarita & Mango Flavored Frozen Lemonade</p>\
+            <p><strong>Why I Love It:</strong> My cousin flew into Dallas for her birthday and dinner reservations were made at this place. We all enjoyed the atmosphere of the restaurant. Definitely my top favorite of the selected 3!</p>\
+        </div>"
+        }
+    ];
+
+    function placeMarkerandPopup(info, token, map) {
+        geocode(info.address, token).then(function(coordinates) {
+            console.log(coordinates);
+            map.setCenter(coordinates);
+            map.setZoom(15);
+
+            var marker = new mapboxgl.Marker().setLngLat(coordinates).addTo(map);
+
+           marker.getElement().addEventListener('click', function() {
+               var popup = new mapboxgl.Popup().setHTML(info.popupHTML);
+               marker.setPopup(popup);
+               popup.addTo(map);
+           });
+        });
+    }
+    restaurantsInfo.forEach(function(restaurantsInfo) {
+        placeMarkerandPopup(restaurantsInfo, mapboxgl.accessToken, map)
+    });
+
+
+
+
+
+</script>
+</body>
+</html>
