@@ -1,42 +1,94 @@
+--bs-card-border-color:
 * {
     box-sizing: border-box;
 }
-.weather-nav {
-
-}
-.weather-main {
-
-}
-.logo {
+.container {
     display: flex;
     flex-direction: column;
-    align-items: start;
-}
-.search-bar {
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid grey;
-    padding: 2px;
-}
-.search-bar:hover, .search-bar:focus-within {
-    background-color: transparent;
-    opacity: 0.75;
-}
-.search-input {
-    border: none;
-    outline: none;
-    flex-grow: 1;
-    padding: 4px;
-    font-size: 14px;
-}
-/*.search-bar {
-  display: flex;
-  align-items: center;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 2px;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
 }
 
-.search-icon {
-  padding: 4px;
-}*/
+.header-container,
+.card-footer {
+    display: flex;
+    width: 100%;
+}
+.header-container {
+    margin-top: auto;
+}
+.left {
+    margin-right: auto;
+}
+
+.right {
+    margin-left: auto;
+}
+.card-footer {
+    margin-bottom: auto;
+}
+.bottom-left {
+    margin-left: auto;
+}
+.bottom-right {
+    margin-right: auto;
+}
+.weather-container {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+.card-img-overlay {
+    background-size: cover;
+    background-position: center;
+}
+.sidebar-container {
+    outline: none;
+}
+.col-5 {
+    border-right: 5px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    height: 100%;
+}
+
+input {
+    width: 85%;
+    justify-content: center;
+    color: white;
+}
+#city-search {
+    display: flex;
+    align-items: center;
+}
+#location-input {
+    box-sizing: border-box;
+    width: 100%;
+    color: white;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding-left: 5px;
+}
+#location-input::placeholder {
+    color: white;
+    opacity: 0.25;
+}
+.card .sidebar-container{
+    margin-right: 5px;
+}
+.card-text-overlay {
+    margin: 5px;
+}
+.main-body-right {
+    right: 10%;
+    margin-top: 50px;
+}
+
+
+
