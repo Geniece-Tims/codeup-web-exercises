@@ -1,117 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <title>Display a map on a webpage</title>
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-    <title>Weather App</title>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css' rel='stylesheet'/>
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js'></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/weather_map.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/weathericons/css/weather-icons.min.css">
+    <link href="css/weather_map.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
-
-
 <body>
-<script src="js/keys.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha38 -geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"></script>
-    <!--main background-->
-<div class="container" id="card-title-year">
-    <div class="header-container">
-        <span class="left">Weather Dashboard</span>
-        <span class="right">2023</span>
-    </div>
-<!--main body card-->
-    <div class="weather-container">
-        <div class="row">
-            <div class="col-12">
-                <div class="card text-bg-dark">
-                    <img src="images/clouds.jpg" class="card-img" alt="A single cloud in the sky">
-                        <div class="card-img-overlay text-light">
-                            <!--Main body is pauses-->
-                            <!--This is where the side panel/search bar starts-->
-                            <div class="sidebar-container position-absolute top-0 start-0">
-                                <div class="col-5 border-white-opacity">
-                                    <div class="card bg-transparent">
-                                        <div class="card-text-overlay text-dark">
-                                            <nav class="navbar bg-transparent">
-                                                <form class="d-flex" role="search">
-                                                    <div id='city-search' class="d-flex align-items-center w-100">
-                                                        <span class="icon-container">
-                                                            <img src="images/thermometer.svg" alt="thermometer icon">
-                                                        </span>
-                                                        <input id="location-input" type="text" placeholder="Search for a city.." class="w-100">
-                                                        <span class="icon-container">
-                                                            <img src="images/search.svg" alt="search icon">
-                                                        </span>
-                                                    </div>
-                                                </form>
-                                            </nav>
-                                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                            <p class="card-text"><small>Last updated 3 mins ago</small></p>
-                                            <p>Something goes here</p>
-                                            <p>Something goes here</p>
-                                            <p>Something goes here</p>
-                                            <p>Something goes here</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        <!--This is where the side panel/search bar ends-->
-                        <!--Main body content continues here-->
-                            <div class="main-body-content position-absolute top-0 start-50 translate-middle-x main-body-right">
-                                <div class="main-body-header">
-                                    <span class="title">NATIONAL</span>
-                                    <span class="title">WEATHER</span>
-                                </div>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small>Last updated 3 mins ago</small></p>
-                            </div>
-                        </div>
-                    <script>
-                        // API endpoint and parameters
-                        const apiUrl = 'https://api.openweathermap.org/data/2.5/weather';
-                        const apiKey = weatherMapKey;
-                        const city = 'Dallas';
-
-                        $.ajax("https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}", {
-                            data: {
-                                APPID: apiKey,
-                                q: "Dallas, US"
-                            }
-                        });
-
-
-                        // Construct the API URL with parameters
-                        const apiUrlWithParams = `${apiUrl}?q=${city}&appid=${apiKey}`;
-
-                        // Make the API request
-                        fetch(apiUrlWithParams)
-                            .then(response => response.json())
-                            .then(data => {
-                                // Extract relevant weather information from the API response
-                                const temperature = data.main.temp;
-                                const weatherDescription = data.weather[0].description;
-
-                                // Update the DOM with the weather information
-                                const weatherContainer = document.getElementById('weather-container');
-                                weatherContainer.innerHTML = `<p>Temperature: ${temperature}°C</p>
-                                                              <p>Description: ${weatherDescription}</p>`;
-                            })
-                            .catch(error => {
-                                console.log('Error:', error);
-                            });
-                    </script>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="card-footer">
-        <span class="bottom left">17°</span>
-        <span class="bottom right">National Weather Group</span>
-    </div>
-
-    <!--where the card begins for side panel content and main body content-->
+<nav class="nav">
+    <img class="custom-logo" src="images/logo.png" alt="weather map custom logo">
+    <div id="current-city"></div>
+</nav>
+<div class="location-search">
+    <form>
+        <input type="text" id="search-box" name="search" placeholder="Search for a city, state, or zip code...">
+        <button type="submit" id="search" value="Find">Find</button>
+    </form>
 </div>
+<div class="weather-content">
+    <div id="card-1" class="card"></div>
+    <div id="card-2" class="card"></div>
+    <div id="card-3" class="card"></div>
+    <div id="card-4" class="card"></div>
+    <div id="card-5" class="card"></div>
+</div>
+<div id="map"></div>
+<br><br>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script src="js/keys.js"></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+<script src="js/weather_map.js"></script>
 </body>
 </html>
+
