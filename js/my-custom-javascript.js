@@ -1,3 +1,21 @@
 "use strict";
-let elements = $('.codeup, #codeup, [title="codeup"]').css('border', '1px solid #F00');
+$('li').css('font-size', '20px');
+$('h1, p, li').hover(
+    function() {
+        $(this).css({
+            'background-color': 'black',
+            'color': 'pink'
+        });
+    },
+    function() {
+        $(this).css('color', 'pink');
+    },
+    function() {
+        $(this).css('color', '');
+    }
+);
+
+$('h1').each(function() {
+    alert($(this).text());
+});
 
