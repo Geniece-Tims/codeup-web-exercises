@@ -1,21 +1,15 @@
-"use strict";
-$('li').css('font-size', '20px');
-$('h1, p, li').hover(
-    function() {
-        $(this).css({
-            'background-color': 'black',
-            'color': 'pink'
-        });
+$('h1').click(function() { $(this).css('background-color', '#FB9');
+});
+
+$('p').dblclick(function() { $(this).css('font-size', '18px');
+
+});
+
+$('li').hover(function() {
+        $(this).css('background-color', 'red');
     },
     function() {
-        $(this).css('color', 'pink');
-    },
-    function() {
-        $(this).css('color', '');
+        $(this).css('background-color', '');
     }
 );
-
-$('h1').each(function() {
-    alert($(this).text());
-});
 
