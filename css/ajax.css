@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: darkblue;
+}
+
+.container-fluid {
+    width: 100%;
+    height: auto;
+}
+
+.navbar-brand img {
+    width: 50px;
+    height: auto;
+    zoom: 2;
+}
+
+.nav-item {
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    color: darkorange;
+    text-decoration: underline;
+    text-decoration-color: darkorange;
+}
+
+.form-control::placeholder {
+    color: darkorange;
+    opacity: 0.75;
+}
+
+.btn {
+    background-color: darkorange;
+    margin-left: 10px;
+    border: none;
+    color: white;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+li img {
+    width: 100px;
+    height: 100px;
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+

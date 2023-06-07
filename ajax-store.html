@@ -1,54 +1,120 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Online Store</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/ajax.css">
 </head>
 <body>
-
-<h1>My Tool Store</h1>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+<nav class="navbar navbar-expand">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="images/toolslogo.png"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Inventory</a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-3" type="search" placeholder="Search for an item..." aria-label="Search">
+                <button class="btn btn-sm" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
 <table id="products">
     <thead>
         <tr>
+            <th>Image</th>
             <th>Title</th>
             <th>Quantity</th>
-            <th>Price</th>
             <th>Categories</th>
+            <th>Price</th>
         </tr>
     </thead>
     <tbody id="insertProducts"></tbody>
+        <tr>
+<!--            <td><img src="images/hammer.png" alt="hammer tool"></td>-->
+<!--            <td><img src="images/drill.png" alt="drill tool"></td>-->
+<!--            <td><img src="images/mower.png" alt="lawn mower"></td>-->
+<!--            <td><img src="images/screwdriver.png" alt="screwdriver tool"></td>-->
+<!--            <td><img src="images/saw.png" alt="saw tool"></td>-->
+<!--            <td><img src="images/axe.png" alt="axe tool"></td>-->
+<!--            <td><img src="images/hardhat.png" alt="safety hard hat"></td>-->
+        </tr>
 </table>
-
+<button type="submit" id="refresh-button">Refresh</button>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
 <script>
+    $('.form-control::placeholder').hover(
+        function() {
+            $(this).css('color', 'black');
+        },
+        function() {
+            $(this).css('color', 'darkorange');
+        }
+    );
 (function() {
     "use strict";
     // TODO: Create an AJAX GET request for the file under data/inventory.json
-    $.ajax({
-        type: "GET",
-        url: "data/inventory.json",
+    $.ajax ({
+        url: 'data/inventory.json',
+        type: 'GET',
         dataType: 'json',
-        success: function(data) {
+        })
+        .done(function (data) {
             console.log(data);
-            data.forEach(function(product) {
-                console.log('Product Name:', product.name);
-                console.log('Quantity:', product.quantity);
-                console.log('Categories:', product.categories);
-                console.log('Price:', product.price);
-            });
-        },
-        error: function(xhr, status, error) {
-            console.log('Error:', error);
-        }
-    });
+        })
+        .fail(function(xhr, status, error) {
+            console.log('Error:', 'error');
+    })
+
     // TODO: Take the data from inventory.json and append it to the products table
+    $.ajax({
+        url: 'data/inventory.json',
+        type: 'GET',
+        dataType: 'json'
+    })
+        .done(function(data) {
+            console.log(data);
+            const productsTable = $('#insertProducts');
+            data.forEach(function(item) {
+                const row = $('<tr></tr>');
+                const image = $('<td></td>').image(item.image);
+                const titleCell = $('<td></td>').text(item.title);
+                const quantityCell = $('<td></td>').text(item.quantity);
+                const categoriesCell = $('<td></td>').text(item.categories.join(', '));
+                const priceCell = $('<td></td>').text(item.price);
+
+                row.append(titleCell, quantityCell, categoriesCell, priceCell);
+
+                productsTable.append(row);
+            });
+        })
+        .fail(function(xhr, status, error) {
+            // Handle error if the request fails
+            console.log('Error:', error);
+        });
+
+    var refreshButton = document.getElementById('refresh-button');
+    refreshButton.addEventListener('click', function(e) {
+        location.reload();
+    });
 
 
     // HINT: Your data should come back as a JSON object; use console.log() to inspect its contents and fields
     // HINT: You will want to target #insertProducts for your new HTML elements
 })();
 </script>
-
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
