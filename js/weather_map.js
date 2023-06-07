@@ -2,8 +2,6 @@
 // accessing the map using key
 let accessToken = mapboxgl.accessToken = myMapboxToken;
 accessToken = mapboxgl.accessToken;
-// adding coordinates on HTML
-let coordinates = document.getElementById('coordinates');
 // modifying map with center and zoom
 let weatherMap = new mapboxgl.Map({
     container: 'map',
@@ -11,14 +9,14 @@ let weatherMap = new mapboxgl.Map({
     center: [-96.7970, 32.7767],
     zoom: 5
 });
-// adding marker on map
+// adding marker on map. Set to Dallas, TX by default
 let marker = new mapboxgl.Marker({
     draggable: true
 })
     .setLngLat([-96.7970, 32.7767])
     .addTo(weatherMap);
 
-// Weather info for student location
+// Weather info for location
 function weatherInfo(lat, lon) {
     $.get("http://api.openweathermap.org/data/2.5/forecast", {
         APPID: weatherMapKey,
