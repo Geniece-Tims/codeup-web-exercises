@@ -41,22 +41,20 @@ getLastCommitDate('Geniece-Tims')
 
 // Another way of doing this:
 //
-// fetch('https://api.github.com/users/davidandstephens/events/public', {headers: {'Authorization': promisesKey}})
-// •then (resp => resp.json ( ) ) Promise<any>
-// .then(data => {
+// fetch('https://api.github.com/users/davidandstephens/events/public', {headers: {'Authorization': githubKey}})
+//     .then (resp => resp.json ( ))
+//     .then(data => {
 //         console. log (data);
 //         for (let event of data) {
 //             if (event. type === "PushEvent") {
 //                 console.log(even.created_at);
-//                 return event payload commits [0].url;
+//                 return event.payload.commits [0].url;
 //             }
 //          }
-// })
-// .then(url => fetch(url, init: {headers: { Authorization': promisesKey ))
-// .then(resp => resp.json())
-// .then(data => console.log(new Date (data.commit.author.dte()));
-
-
+//     })
+//     .then(url => fetch(url, {headers: { 'Authorization': `token ${githubKey}}}))`
+//     .then(resp => resp.json())
+//     .then(data => console.log(new Date (data.commit.author.date())),
 
 
 
@@ -64,13 +62,28 @@ getLastCommitDate('Geniece-Tims')
 
 
 function wait(num) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
+     return new Promise((resolve, reject) => {
+          setTimeout(() => {
             resolve();
-        }, num)
-    })
-    wait(1000).then(() => console.log('You\'ll see this after 1 second'));
-    wait(3000).then(() => console.log('You\'ll see this after 3 seconds'));
-}
-console.log(wait());
+          }, num);
+        });
+     },
+
+     wait(1000).then(() => console.log('You\'ll see this after 1 second')),
+     wait(3000).then(() => console.log('You\'ll see this after 3 seconds'))
+    ),},}
+    ))
+
+// What we did in class(closing braces were causing errors):
+// function wait(num) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve();
+//         }, num)
+//     });
+// }
+//
+//     wait(1000).then(() => console.log('You\'ll see this after 1 second'));
+//     wait(3000).then(() => console.log('You\'ll see this after 3 seconds'));
+
 
