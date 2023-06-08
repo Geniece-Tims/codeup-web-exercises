@@ -33,23 +33,16 @@
 <table id="products">
     <thead>
         <tr>
-            <th>Image</th>
-            <th>Title</th>
-            <th>Quantity</th>
-            <th>Categories</th>
+            <th>Product</th>
+            <th>Name</th>
+            <th>Stock</th>
+            <th>Category</th>
             <th>Price</th>
         </tr>
     </thead>
-    <tbody id="insertProducts"></tbody>
-        <tr>
-<!--            <td><img src="images/hammer.png" alt="hammer tool"></td>-->
-<!--            <td><img src="images/drill.png" alt="drill tool"></td>-->
-<!--            <td><img src="images/mower.png" alt="lawn mower"></td>-->
-<!--            <td><img src="images/screwdriver.png" alt="screwdriver tool"></td>-->
-<!--            <td><img src="images/saw.png" alt="saw tool"></td>-->
-<!--            <td><img src="images/axe.png" alt="axe tool"></td>-->
-<!--            <td><img src="images/hardhat.png" alt="safety hard hat"></td>-->
-        </tr>
+    <tbody id="insertProducts">
+
+    </tbody>
 </table>
 <button type="submit" id="refresh-button">Refresh</button>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
@@ -89,13 +82,13 @@
             const productsTable = $('#insertProducts');
             data.forEach(function(item) {
                 const row = $('<tr></tr>');
-                const image = $('<td></td>').image(item.image);
-                const titleCell = $('<td></td>').text(item.title);
-                const quantityCell = $('<td></td>').text(item.quantity);
+                const productCell = $('<td></td>').image(item.image);
+                const nameCell = $('<td></td>').text(item.title);
+                const stockCell = $('<td></td>').text(item.quantity);
                 const categoriesCell = $('<td></td>').text(item.categories.join(', '));
                 const priceCell = $('<td></td>').text(item.price);
 
-                row.append(titleCell, quantityCell, categoriesCell, priceCell);
+                row.append(productCell, nameCell, stockCell, categoriesCell, priceCell);
 
                 productsTable.append(row);
             });
