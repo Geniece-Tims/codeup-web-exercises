@@ -1,4 +1,7 @@
-var username = 'Geniece-Tims'
+var githubKey = promisesKey;
+var username = 'Geniece-Tims';
+
+
 
 function getLastCommitDate() {
     const url = `https://api.github.com/users/${username}/repos`;
@@ -36,7 +39,22 @@ getLastCommitDate('Geniece-Tims')
 
 
 
-
+// Another way of doing this:
+//
+// fetch('https://api.github.com/users/davidandstephens/events/public', {headers: {'Authorization': promisesKey}})
+// •then (resp => resp.json ( ) ) Promise<any>
+// .then(data => {
+//         console. log (data);
+//         for (let event of data) {
+//             if (event. type === "PushEvent") {
+//                 console.log(even.created_at);
+//                 return event payload commits [0].url;
+//             }
+//          }
+// })
+// .then(url => fetch(url, init: {headers: { Authorization': promisesKey ))
+// .then(resp => resp.json())
+// .then(data => console.log(new Date (data.commit.author.dte()));
 
 
 
