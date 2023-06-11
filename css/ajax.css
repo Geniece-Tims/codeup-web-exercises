@@ -62,3 +62,17 @@ li img {
     border-radius: 5px;
 }
 
+#insertProducts img {
+    width: 70px;
+    height: auto;
+}
+
+#refresh-button  {
+    border: none;
+    border-radius: 5px;
+    background-color: darkorange;
+    color: white;
+    margin-top: 5px;
+    font-size: 16px;
+}
+

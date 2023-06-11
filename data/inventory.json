@@ -1,58 +1,65 @@
 [
     {
         "title": "Hammer",
+        "imageURL": "images/hammer.png",
         "quantity": 25,
         "categories": [
             "tool"
         ],
-        "price": 20
+        "price": 20.99
     }, {
         "title": "Drill",
+        "imageURL": "images/drill.png",
         "quantity": 5,
         "categories": [
             "tool",
             "powered"
         ],
-        "price": 100
+        "price": 100.99
     }, {
         "title": "Mower",
+        "imageURL": "images/mower.png",
         "quantity": 5,
         "categories": [
             "tool",
             "gas",
             "outdoor"
         ],
-        "price": 200
+        "price": 200.99
     }, {
         "title": "Screwdrivers",
+        "imageURL": "images/screwdriver.png",
         "quantity": 25,
         "categories": [
             "tool"
         ],
-        "price": 10
+        "price": 10.99
     }, {
         "title": "Saw",
+        "imageURL": "images/saw.png",
         "quantity": 20,
         "categories": [
             "tool",
             "powered"
         ],
-        "price": 35
+        "price": 35.99
     }, {
         "title": "Axe",
+        "imageURL": "images/axe.png",
         "quantity": 35,
         "categories": [
             "tool",
             "outdoor"
         ],
-        "price": 30
+        "price": 30.99
     }, {
         "title": "Hard Hat",
+        "imageURL": "images/hardhat.png",
         "quantity": 50,
         "categories": [
             "General",
             "Safety"
         ],
-        "price": 10
+        "price": 10.99
 }
 ]

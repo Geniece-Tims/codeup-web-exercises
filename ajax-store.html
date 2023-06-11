@@ -35,14 +35,12 @@
         <tr>
             <th>Product</th>
             <th>Name</th>
-            <th>Stock</th>
+            <th>Quantity</th>
             <th>Category</th>
             <th>Price</th>
         </tr>
     </thead>
-    <tbody id="insertProducts">
-
-    </tbody>
+    <tbody id="insertProducts"></tbody>
 </table>
 <button type="submit" id="refresh-button">Refresh</button>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
@@ -82,11 +80,11 @@
             const productsTable = $('#insertProducts');
             data.forEach(function(item) {
                 const row = $('<tr></tr>');
-                const productCell = $('<td></td>').image(item.image);
+                const productCell = $('<td></td>').append($('<img>').attr('src', item.imageURL));
                 const nameCell = $('<td></td>').text(item.title);
                 const stockCell = $('<td></td>').text(item.quantity);
                 const categoriesCell = $('<td></td>').text(item.categories.join(', '));
-                const priceCell = $('<td></td>').text(item.price);
+                const priceCell = $('<td></td>').text('$' + item.price);
 
                 row.append(productCell, nameCell, stockCell, categoriesCell, priceCell);
 
