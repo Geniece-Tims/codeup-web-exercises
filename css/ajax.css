@@ -44,9 +44,9 @@
     color: white;
 }
 
-table {
-    border-collapse: collapse;
+#products {
     width: 100%;
+    height: auto;
 }
 
 th, td {
