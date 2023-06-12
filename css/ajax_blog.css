@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+nav {
+    width: 100%;
+    height: auto;
+    background-color: black;
+}
+a img {
+    width: 15em;
+    height: auto;
+    margin: 5px 10px;
+}
+
+body {
+    background-color: #000000;
+    color: #FFFFFF;
+    margin: 15px;
+}
+
+h2 {
+    font-family: 'Sacramento', sans-serif;
+    color: hotpink;
+}
+
+.post-image {
+    width: 400px;
+    height: auto;
+    float: left;
+    margin-right: 20px;
+}
+
+h4 {
+    font-size: 12px;
+}
+
+.ingredients-container {
+    column-count: 2;
+    column-gap: 20px;
+}
+
+

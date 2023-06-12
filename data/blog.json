@@ -1,20 +1,21 @@
 [
     {
-        "title": "My First Blog Post",
-        "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "categories": [
-            "greek"
-        ],
-        "date": "January 25, 2015"
+        "imageURL": "images/chocolate_raspberry.jpg",
+        "title": "Chocolate Raspberry Cupcakes",
+        "categories": "Vegetarian",
+        "servings": "12 Cupcakes",
+        "totaltime": "18 min",
+        "content": "These are the best chocolate raspberry cupcakes! They are moist dark chocolate cupcakes filled with raspberry chocolate ganache and topped with raspberry frosting.",
+        "ingredients": "Produce\n 1/2 cup Raspberries, freeze dried\nRefrigerated\n 1 Egg\n 1 Egg yolk\nCondiments\n 1/2 cup Raspberry conserve\nBaking & Spices\n 1 cup All-purpose flour\n 1/2 tsp Baking powder\n 1/2 tsp Baking soda\n 5/16 cup Cocoa powder, Dutch process\n 1 1/2 cups Powdered sugar\n 1/4 tsp Salt\n 1 pinch Salt\n 4 oz Semi-sweet chocolate\n 2 tsp Vanilla\n 3/4 cup White sugar, granulated\nDrinks\n 1 tsp Espresso\nDairy\n 1 cup Butter, unsalted\n 3/8 cup Heavy cream\n 1/4 cup Sour cream\n 1/2 cup Whole milk",
+        "recipe": "INSTRUCTIONS\nFor the Chocolate Cupcakes\nPreheat the oven to 350 degrees. Line a cupcake pan with 12 liners and set aside.\n\n\nIn a small bowl sift together all purpose flour, Dutch process cocoa powder, baking powder, baking soda, salt and espresso powder. Set aside."
     }, {
-        "title": "The Second Post",
-        "content": "Cupcake ipsum dolor sit amet gummies. Cake chocolate sweet ice cream oat cake biscuit bear claw dessert. Jujubes marzipan toffee apple pie pastry dragée jujubes marshmallow. Dragée chocolate gingerbread liquorice chocolate bar jujubes. Sweet chocolate bar jelly-o chocolate cake candy carrot cake cotton candy macaroon marzipan. Sweet roll biscuit sweet gummies topping sesame snaps tootsie roll sugar plum pie. Sweet muffin croissant chocolate cake chupa chups. Donut croissant gummies donut powder ice cream. Chupa chups halvah apple pie topping jelly beans donut candy canes donut. Bonbon cake gummi bears cheesecake tart topping powder liquorice gummi bears.",
-        "categories": [
-            "family",
-            "candy",
-            "sweets",
-            "sugar"
-        ],
-        "date": "February 14, 2015"
+        "imageURL": "images/butterfinger.jpg",
+        "title": "Butterfinger Cupcakes",
+        "categories": "Vegetarian",
+        "servings": "14-16 Cupcakes",
+        "totaltime": "1 hr 20 min",
+        "content": "These Butterfinger Cupcakes are made with peanut butter cupcakes, chocolate ganache and peanut butter frosting full of crushed Butterfingers! They are a Butterfinger lover’s dream!",
+        "ingredients": "1/2 cup (104g) sugar\n1/4 cup (36g) brown sugar\n1/4 cup (56g) unsalted butter, room temperature\n1/2 cup (140g) creamy peanut butter\n1/4 cup (58g) sour cream, room temperature\n1 tsp vanilla extract\n3 large egg whites, room temperature\n1 1/4 cups (163g) all-purpose flour\n2 tsp baking powder\n1/4 tsp salt\n6 tbsp (90ml) milk, room temperature2 tbsp (30ml) water, room temperature\n1/2 cup crushed butterfingers\nCHOCOLATE GANACHE\n5 oz (142g) semi sweet chocolate chips\n6 tbsp (90ml) heavy whipping creamPEANUT BUTTER FROSTING\n1/2 cup (112g) salted butter\n1/2 cup (140g) peanut butter\n1/4 cup (48g) shortening3 1/2 cups (403g) powdered sugar\n3–4 tbsp (45-60ml) water or milk\n3/4 cup crushed butterfingers",
+        "recipe": "Preheat oven to 350°F (176°C) and prepare a cupcake pan with cupcake liners.\nIn a large mixing bowl, combine sugar, brown sugar, butter and peanut butter.  Using an electric mixer on medium, beat until light in color and fluffy, about 3-4 minutes. Do not skimp on the amount of mixing time.\nAdd sour cream and vanilla extract and mix until well combined.\nAdd egg whites in two batches, mixing until well combined after each. Scrape down the sides of the bowl as needed to be sure all ingredients are well incorporated.\nIn a separate bowl, whisk together the flour, baking powder and salt. In a separate small measuring cup, combine the milk and water.\nAdd half of the dry ingredients to the batter and mix until well combined. Add the milk mixture and mix until well combined. Add remaining dry ingredients and mix until well combined. Scrape down the sides of the bowl as needed to be sure all ingredients are well incorporated.\nStir in the crushed butterfingers.\nFill the cupcake liners about halfway. Bake for 18-20 minutes, or until a toothpick inserted comes out with a few crumbs.\nRemove cupcakes from oven and allow to cool for 2-3 minutes, then remove to cooling rack to finish cooling.\nMake the Chocolate Ganache:\n\nAdd the chocolate chips to a medium sized bowl. Microwave the heavy whipping cream until it almost comes to a boil.\nPour the cream over the chocolate chips, cover the bowl with clear wrap for 3-4 minutes, then whisk until smooth. Set aside to cool.\nMake the Peanut Butter Frosting:\nWhile the chocolate ganache cools, make the frosting. Combine the butter, peanut butter and shortening with a mixer until smooth.\nAdd about half of the powdered sugar and mix until smooth and well combined.\nAdd 2-3 tablespoons of water or milk to the frosting and mix until well combined.\nAdd remaining powdered sugar and mix until smooth.\nAdd additional water or milk, as needed, to get the right consistency, then stir in the crushed butterfinger. Set aside.\nSpread a layer of chocolate ganache onto the top of each cupcake.\nPipe the frosting onto the top of each cupcake. I used a large round pastry tip.\nTop the cupcakes with additional crushed butterfinger and a piece of butterfinger, if desired."
     }
 ]
