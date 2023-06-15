@@ -8,9 +8,13 @@ nav {
     background-color: black;
 }
 a img {
-    width: 15em;
+    width: 10em;
     height: auto;
     margin: 5px 10px;
+}
+
+img {
+    margin: 10px 5px;
 }
 
 body {
@@ -25,10 +29,14 @@ h2 {
 }
 
 .post-image {
-    width: 400px;
+    width: 250px;
     height: auto;
     float: left;
     margin-right: 20px;
+}
+
+p {
+    font-size: 8px;
 }
 
 h4 {
@@ -37,7 +45,22 @@ h4 {
 
 .ingredients-container {
     column-count: 2;
-    column-gap: 20px;
+    column-gap: 15px;
+    font-size: 12px;
+}
+
+h5 {
+    margin-top: 12px;
+    font-size: 16px;
+}
+
+.recipe-container {
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+.recipe-list {
+    text-decoration: none;
 }
 
 
