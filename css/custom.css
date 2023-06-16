@@ -1,18 +1,12 @@
 * {
     box-sizing: border-box;
 }
-.container {
-    background-image: url("images/pizza.png");
-    height: 346px;
-    background-size: cover;
-}
-.jumbotron .pizza-caption {
-    display: flex;
+/*.jumbotron {*/
+/*    background-image: url("images/pizza.png");*/
+/*    height: 346px;*/
+/*    background-size: cover;*/
+/*}*/
 
-}
 
-.chevron {
-    color: white;
-}
 
 
